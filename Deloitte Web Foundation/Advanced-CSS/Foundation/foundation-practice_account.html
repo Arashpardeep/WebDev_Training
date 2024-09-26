@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Account by foundation</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/foundation-sites@6.8.1/dist/css/foundation.min.css"
+      crossorigin="anonymous"
+    />
+
+    <!-- Compressed JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/what-input/5.2.12/what-input.min.js"></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/foundation-sites@6.8.1/dist/js/foundation.min.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="account-form">
+      <ul class="tabs" data-tabs id="tabs-content">
+        <li class="tabs-title">
+          <a href="#tabBasic1"><button>Account Details</button></a>
+        </li>
+        <li class="tabs-title">
+          <a href="#tabBasic2"><button>Type of Account</button></a>
+        </li>
+        <li class="tabs-title">
+          <a href="#tabBasic3"><button>Applicant Details</button></a>
+        </li>
+        <li class="tabs-title">
+          <a href="#tabBasic4"><button>Residence Address</button></a>
+        </li>
+        <li class="tabs-title">
+          <a href="#tabBasic5"><button>Constitution</button></a>
+        </li>
+        <li class="tabs-title">
+          <a href="#tabBasic6"><button>EEFC Account</button></a>
+        </li>
+      </ul>
+
+      <div class="tabs-content" data-tabs-content="tabs-basic">
+        <div class="tabs-panel is-active" id="tabBasic1">
+          <form>
+            <div class="grid-container">
+              <div class="grid-x grid-padding-x">
+                <div class="small-12 cell">
+                  <h1
+                    class="text-center"
+                    style="
+                      color: rgb(15, 15, 132);
+                      background-color: rgb(255, 255, 0);
+                    "
+                  >
+                    ICICI Bank
+                  </h1>
+                </div>
+
+                <div class="small-12 medium-6 large-6 cell">
+                  <label for="customer">Customer ID</label>
+                  <input type="text" name="customer" id="customer" />
+                </div>
+
+                <div class="small-12 medium-6 large-6 cell">
+                  <label for="accnum">Account Number</label>
+                  <input type="text" name="accnum" id="accnum" />
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+
+        <div class="tabs-panel" id="tabBasic2">
+          <form>
+            <div class="grid-container">
+              <div class="grid-x grid-padding-x">
+                <div class="small-12 cell">
+                  <h3
+                    class="text-center"
+                    style="
+                      color: rgb(15, 15, 132);
+                      background-color: rgb(199, 174, 141);
+                    "
+                  >
+                    TYPE OF ACCOUNT
+                  </h3>
+                </div>
+
+                <div class="small-12 cell">
+                  <select name="acctype" id="acctype" class="float-center">
+                    <option value="current" class="padding-left">
+                      CURRENT ACCOUNT
+                    </option>
+                    <option value="exchange" class="padding-left">
+                      EXCHANGE EARNER'S FOREIGN CURRENCY ACCOUNT (EEFC)
+                    </option>
+                    <option value="saving" class="padding-left">
+                      SPECIAL SAVING ACCOUNT
+                    </option>
+                    <option value="others" class="padding-left">OTHERS</option>
+                  </select>
+                </div>
+
+                <div class="small-2">
+                  <div></div>
+                </div>
+
+                <div class="small-8 cell">
+                  <h4
+                    class="text-center"
+                    style="
+                      color: rgb(15, 15, 132);
+                      background-color: rgb(199, 174, 141);
+                    "
+                  >
+                    IKIT / NON-IKIT
+                  </h4>
+                </div>
+
+                <div class="small-2">
+                  <div></div>
+                </div>
+
+                <div class="small-6 cell">
+                  <input type="radio" name="kit" id="ikit" />
+                  <label for="ikit">IKIT</label>
+                </div>
+
+                <div class="small-6 cell">
+                  <input type="radio" name="kit" id="nonikit" />
+                  <label for="nonikit">NON-IKIT</label>
+                </div>
+
+                <div class="small-2">
+                  <div></div>
+                </div>
+
+                <div class="small-8 cell">
+                  <h4
+                    class="text-center"
+                    style="
+                      color: rgb(15, 15, 132);
+                      background-color: rgb(199, 174, 141);
+                    "
+                  >
+                    PRODUCT DETAILS @
+                  </h4>
+                </div>
+
+                <div class="small-2">
+                  <div></div>
+                </div>
+
+                <div class="small-4 cell">
+                  <label for="product">Product Name</label>
+                </div>
+
+                <div class="small-8 cell">
+                  <input type="text" name="product" />
+                </div>
+
+                <div class="small-4 large-2 cell">
+                  <input type="radio" name="mab" id="mab" />
+                  <label for="mab">MAB</label>
+                </div>
+
+                <div class="small-4 large-2 cell">
+                  <input type="radio" name="qtp" id="qtp" />
+                  <label for="qtp">QTP</label>
+                </div>
+
+                <div class="small-4 large-2 cell">
+                  <input type="radio" name="oth" id="oth" />
+                  <label for="oth">Others</label>
+                </div>
+
+                <div class="small-3 large-2 cell">
+                  <label for="value">Value:</label>
+                </div>
+
+                <div class="small-9 large-4 cell">
+                  <input type="number" name="value" />
+                </div>
+
+                <div class="small-3 large-1 cell">
+                  <label for="branch">Branch</label>
+                </div>
+
+                <div class="small-9 large-5 cell">
+                  <input type="text" name="branch" />
+                </div>
+
+                <div class="small-3 large-1 cell">
+                  <label for="branchcode">BranchCode</label>
+                </div>
+
+                <div class="small-9 large-5 cell">
+                  <input type="number" name="branchcode" />
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+
+        <div class="tabs-panel" id="tabBasic3">
+          <form>
+            <div class="grid-container">
+              <div class="grid-x grid-padding-x">
+                <div class="small-12 cell">
+                  <h3
+                    class="text-center"
+                    style="
+                      color: rgb(15, 15, 132);
+                      background-color: rgb(199, 174, 141);
+                    "
+                  >
+                    APPLICANT DETAILS
+                  </h3>
+                </div>
+
+                <div class="small-5 cell">
+                  <label for="titlename">Account Title/Name</label>
+                </div>
+
+                <div class="small-7 cell">
+                  <input type="text" name="titlename" />
+                </div>
+
+                <div class="small-5 cell">
+                  <label for="dob">Date of Incorporation/ Date of Birth:</label>
+                </div>
+
+                <div class="small-7 cell">
+                  <input type="number" name="dob" />
+                </div>
+
+                <div class="small-5 cell">
+                  <label for="existing">Existing A/c. No.</label>
+                </div>
+
+                <div class="small-7 cell">
+                  <input type="text" name="existing" />
+                </div>
+
+                <div class="small-5 cell">
+                  <label for="joint">Joint Applicant</label>
+                </div>
+
+                <div class="small-7 cell">
+                  <input type="number" name="joint" />
+                </div>
+
+                <div class="small-5 cell">
+                  <label for="impexp">Importer / Exporter Code Number</label>
+                </div>
+
+                <div class="small-7 cell">
+                  <input type="number" name="impexp" />
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+
+        <div class="tabs-panel" id="tabBasic4">
+          <form>
+            <div class="grid-container">
+              <div class="grid-x grid-padding-x">
+                <div class="small-12 cell">
+                  <h3
+                    class="text-center"
+                    style="
+                      color: rgb(15, 15, 132);
+                      background-color: rgb(199, 174, 141);
+                    "
+                  >
+                    RESIDENCE ADDRESS
+                  </h3>
+                </div>
+
+                <div class="small-3 cell">
+                  <label for="particulars">Particulars:</label>
+                </div>
+
+                <div class="small-9 cell">
+                  <input type="text" name="particulars" />
+                </div>
+
+                <div class="small-3 cell">
+                  <label for="city">City:</label>
+                </div>
+
+                <div class="small-9 cell">
+                  <input type="number" name="city" />
+                </div>
+
+                <div class="small-3 cell">
+                  <label for="state">State:</label>
+                </div>
+
+                <div class="small-9 cell">
+                  <input type="text" name="state" />
+                </div>
+
+                <div class="small-3 cell">
+                  <label for="pin">PIN:</label>
+                </div>
+
+                <div class="small-9 cell">
+                  <input type="number" name="pin" />
+                </div>
+
+                <div class="small-3 cell">
+                  <label for="telephone">Telephone:</label>
+                </div>
+
+                <div class="small-9 cell">
+                  <input type="tel" name="telephone" />
+                </div>
+
+                <div class="small-3 cell">
+                  <label for="mobile">Mobile:</label>
+                </div>
+
+                <div class="small-9 cell">
+                  <input type="tel" name="mobile" />
+                </div>
+
+                <div class="small-3 cell">
+                  <label for="fax">Fax:</label>
+                </div>
+
+                <div class="small-9 cell">
+                  <input type="text" name="fax" />
+                </div>
+
+                <div class="small-3 cell">
+                  <label for="mail">Email:</label>
+                </div>
+
+                <div class="small-9 cell">
+                  <input type="email" name="mail" />
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+
+        <div class="tabs-panel" id="tabBasic5">
+          <form>
+            <div class="grid-container">
+              <div class="grid-x grid-padding-x">
+                <div class="small-12 cell">
+                  <h3
+                    class="text-center"
+                    style="
+                      color: rgb(15, 15, 132);
+                      background-color: rgb(199, 174, 141);
+                    "
+                  >
+                    CONSTITUTION
+                  </h3>
+                </div>
+
+                <div class="small-12 medium-6 large-4 cell">
+                  <input type="checkbox" name="individual" id="individual" />
+                  <label for="individual">INDIVIDUAL</label>
+                </div>
+
+                <div class="small-12 medium-6 large-3 cell">
+                  <input type="checkbox" name="sole" id="sole" />
+                  <label for="sole">SOLE PROPRIETOR</label>
+                </div>
+
+                <div class="small-12 medium-6 large-4 cell">
+                  <input type="checkbox" name="huf" id="huf" />
+                  <label for="huf">HUF</label>
+                </div>
+
+                <div class="small-12 medium-6 large-4 cell">
+                  <input type="checkbox" name="partnership" id="partnership" />
+                  <label for="partnership">PARTNERSHIP</label>
+                </div>
+
+                <div class="small-12 medium-6 large-3 cell">
+                  <input type="checkbox" name="publicltd" id="publicltd" />
+                  <label for="publicltd">PUBLIC LTD.</label>
+                </div>
+
+                <div class="small-12 medium-6 large-5 cell">
+                  <input type="checkbox" name="tasc" id="tasc" />
+                  <label for="tasc">TRUST/ASSO./SOC./CLUBS</label>
+                </div>
+
+                <div class="small-12 medium-6 large-4 cell">
+                  <input type="checkbox" name="privateltd" id="privateltd" />
+                  <label for="privateltd">PRIVATE LTD.</label>
+                </div>
+
+                <div class="small-12 medium-6 large-3 cell">
+                  <input type="checkbox" name="section25" id="section25" />
+                  <label for="section25">SECTION 25</label>
+                </div>
+
+                <div class="small-12 medium-8 large-5 cell">
+                  <input type="checkbox" name="sbgb" id="sbgb" />
+                  <label for="sbgb">STATUTORY BODY / GOVERNMENT BODY</label>
+                </div>
+
+                <div class="small-12 medium-4 large-3 cell">
+                  <input type="checkbox" name="others" id="others" />
+                  <label for="others">OTHERS</label>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+
+        <div class="tabs-panel" id="tabBasic6">
+          <form>
+            <div class="grid-container">
+              <div class="grid-x grid-padding-x">
+                <div class="small-12 cell">
+                  <h3
+                    class="text-center"
+                    style="
+                      color: rgb(15, 15, 132);
+                      background-color: rgb(199, 174, 141);
+                    "
+                  >
+                    To be filled in for Exchange Earner's Foreign Currency
+                    Account (EEFC Account)
+                  </h3>
+                </div>
+
+                <div class="small-12 cell">
+                  <strong>STATUS</strong>
+                </div>
+
+                <div class="small-12 medium-6 large-3 cell">
+                  <input type="checkbox" name="sez" id="sez" />
+                  <label for="sez">Unit in SEZ</label>
+                </div>
+
+                <div class="small-12 medium-6 large-3 cell">
+                  <input type="checkbox" name="stp" id="stp" />
+                  <label for="stp">Unit in STP</label>
+                </div>
+
+                <div class="small-12 medium-6 large-3 cell">
+                  <input type="checkbox" name="ehtp" id="ehtp" />
+                  <label for="ehtp">Unit in EHTP</label>
+                </div>
+
+                <div class="small-12 medium-6 large-3 cell">
+                  <input type="checkbox" name="eou" id="eou" />
+                  <label for="eou">100% EOU</label>
+                </div>
+
+                <div class="small-12 medium-6 large-3 cell">
+                  <input type="checkbox" name="dta" id="dta" />
+                  <label for="dta">Unit in DTA for supply to SEZ</label>
+                </div>
+
+                <div class="small-12 medium-6 large-3 cell">
+                  <input type="checkbox" name="epz" id="epz" />
+                  <label for="epz">Unit in EPZ</label>
+                </div>
+
+                <div class="small-12 medium-6 large-3 cell">
+                  <input type="checkbox" name="indiprof" id="indiprof" />
+                  <label for="indiprof">Individual Professional</label>
+                </div>
+
+                <div class="small-12 medium-6 large-3 cell">
+                  <input type="checkbox" name="ordres" id="ordres" />
+                  <label for="ordres">Ordinary Resident</label>
+                </div>
+
+                <div class="small-12 medium-6 large-3 cell">
+                  <input type="checkbox" name="stathold" id="stathold" />
+                  <label for="stathold">Status Holder</label>
+                </div>
+
+                <div class="small-12 medium-6 large-3 cell">
+                  <input type="checkbox" name="oth" id="oth" />
+                  <label for="oth">Others</label>
+                </div>
+
+                <div class="small-12 mt-4 cell">
+                  <strong>CURRENCY</strong>
+                </div>
+
+                <div class="small-12 medium-6 large-3 cell">
+                  <input type="checkbox" name="usd" id="usd" />
+                  <label for="usd">USD</label>
+                </div>
+
+                <div class="small-12 medium-6 large-3 cell">
+                  <input type="checkbox" name="euro" id="euro" />
+                  <label for="euro">EURO</label>
+                </div>
+
+                <div class="small-12 medium-6 large-3 cell">
+                  <input type="checkbox" name="gbp" id="gbp" />
+                  <label for="gbp">GBP</label>
+                </div>
+
+                <div class="small-12 medium-6 large-3 cell">
+                  <input type="checkbox" name="jpy" id="jpy" />
+                  <label for="jpy">JPY</label>
+                </div>
+
+                <div class="small-12 medium-6 large-3 cell">
+                  <input type="checkbox" name="ots" id="ots" />
+                  <label for="ots">OTHERS</label>
+                </div>
+
+                <div class="small-12 cell">
+                  <p>For other Currencies, Check with Bank Official</p>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <script>
+        $(document).ready(function () {
+          $(document).foundation();
+          $(".tabs-title").click(function () {
+            // Close all tabs
+            console.log("TEST");
+            $(".tabs-title").removeClass("is-active");
+            $(".tabs-panel").removeClass("is-active");
+
+            // Open the clicked tab
+            $(this).addClass("is-active");
+            var tabId = $(this).find("a").attr("href");
+            console.log(tabId);
+            $(tabId).addClass("is-active");
+          });
+        });
+      </script>
+    </div>
+  </body>
+</html>

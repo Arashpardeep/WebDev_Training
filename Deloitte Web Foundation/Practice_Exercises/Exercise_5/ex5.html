@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Drag and Drop the Letter</title>
+  </head>
+
+  <style>
+    .table {
+      display: inline-block;
+      margin: 12px;
+      border: 2px solid black;
+      width: 200px;
+      padding: 5px;
+      border-spacing: 8px;
+      border-radius: 8px;
+    }
+
+    .table tr td {
+      border: 2px solid black;
+      text-align: center;
+      width: 200px;
+    }
+
+    #table1 tr td {
+      background-color: rgb(160, 13, 13);
+      color: #fff;
+    }
+
+    #table2 {
+      background-color: rgb(90, 189, 225);
+    }
+
+    #table2 tr td {
+      background-color: #fff;
+    }
+  </style>
+
+  <body>
+    <div class="container">
+      <table id="table1" class="table">
+        <tbody>
+          <tr>
+            <td id="drag1" class="left" draggable="true">D</td>
+          </tr>
+          <tr>
+            <td id="drag2" class="left" draggable="true">P</td>
+          </tr>
+          <tr>
+            <td id="drag3" class="left" draggable="true">W</td>
+          </tr>
+          <tr>
+            <td id="drag4" class="left" draggable="true">O</td>
+          </tr>
+          <tr>
+            <td id="drag5" class="left" draggable="true">G</td>
+          </tr>
+          <tr>
+            <td id="drag6" class="left" draggable="true">K</td>
+          </tr>
+          <tr>
+            <td id="drag7" class="left" draggable="true">U</td>
+          </tr>
+          <tr>
+            <td id="drag8" class="left" draggable="true">E</td>
+          </tr>
+          <tr>
+            <td id="drag9" class="left" draggable="true">H</td>
+          </tr>
+          <tr>
+            <td id="drag10" class="left" draggable="true">M</td>
+          </tr>
+          <tr>
+            <td id="drag11" class="left" draggable="true">C</td>
+          </tr>
+          <tr>
+            <td id="drag12" class="left" draggable="true">S</td>
+          </tr>
+        </tbody>
+      </table>
+      <table id="table2" class="table">
+        <tbody>
+          <tr>
+            <td class="right">B/<span id="span1" class="blank">---</span>/D</td>
+          </tr>
+          <tr>
+            <td class="right">G/<span id="span2" class="blank">---</span>/I</td>
+          </tr>
+          <tr>
+            <td class="right">J/<span id="span3" class="blank">---</span>/L</td>
+          </tr>
+          <tr>
+            <td class="right">C/<span id="span4" class="blank">---</span>/E</td>
+          </tr>
+          <tr>
+            <td class="right">L/<span id="span5" class="blank">---</span>/N</td>
+          </tr>
+          <tr>
+            <td class="right">O/<span id="span6" class="blank">---</span>/Q</td>
+          </tr>
+          <tr>
+            <td class="right">R/<span id="span7" class="blank">---</span>/T</td>
+          </tr>
+          <tr>
+            <td class="right">T/<span id="span8" class="blank">---</span>/V</td>
+          </tr>
+          <tr>
+            <td class="right">V/<span id="span9" class="blank">---</span>/X</td>
+          </tr>
+          <tr>
+            <td class="right">
+              D/<span id="span10" class="blank">---</span>/F
+            </td>
+          </tr>
+          <tr>
+            <td class="right">
+              F/<span id="span11" class="blank">---</span>/H
+            </td>
+          </tr>
+          <tr>
+            <td class="right">
+              N/<span id="span12" class="blank">---</span>/P
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <script>
+      var left = document.querySelectorAll(".left");
+      var right = document.querySelectorAll(".right");
+      var blank = document.querySelectorAll(".blank");
+      var temp = null;
+
+      for (var i = 0; i < left.length; i++) {
+        left[i].addEventListener("dragstart", dragStart);
+      }
+
+      for (var i = 0; i < right.length; i++) {
+        right[i].addEventListener("dragover", dragOver);
+        right[i].addEventListener("drop", drop);
+      }
+
+      function dragStart(event) {
+        event.dataTransfer.setData("lefttable", event.target.id);
+        temp = event.target.innerText;
+      }
+
+      function dragOver(event) {
+        event.preventDefault();
+      }
+
+      function drop(event) {
+        var dragged = event.dataTransfer.getData("lefttable");
+        var draghtml = document.getElementById(dragged);
+        var dragletter = draghtml.innerText;
+        console.log(dragletter);
+
+        if (
+          dragletter.charCodeAt(0) ==
+          event.target.innerText.charCodeAt(0) + 1
+        ) {
+          event.target.innerText =
+            event.target.innerText[0] +
+            "/" +
+            dragletter +
+            "/" +
+            event.target.innerText[6];
+
+          draghtml.parentElement.remove();
+        }
+      }
+    </script>
+  </body>
+</html>

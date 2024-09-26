@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My form</title>
+  </head>
+  <body>
+    <form>
+      <label for="username">Username:</label>
+      <input
+        type="text"
+        name="username"
+        placeholder="Enter your name here"
+        minlength="6"
+        value="TheUserName"
+        required
+      />
+      <br />
+
+      <label for="favColor">Favourite Color:</label>
+      <input type="color" name="favColor" />
+      <br />
+
+      <label for="email">Email:</label>
+      <input type="email" name="email" required />
+      <br />
+
+      <label for="languages">languages Known:</label>
+      <input type="checkbox" name="cpp" /> C++
+      <input type="checkbox" name="js" /> JavaScript
+      <input type="checkbox" name="css" /> CSS
+      <br />
+
+      <label for="post"> Post:</label>
+      <input type="radio" name="post" id="admin" /> Admin
+      <input type="radio" name="post" id="manager" /> manager
+      <br />
+
+      <label for="age">Age:</label>
+      <input type="number" name="age" step="5" min="10" />
+      <br />
+
+      <label for="salary">Salary:</label>
+      <span>10</span>
+      <input type="range" name="salary" min="10" step="2" max="20" />
+      <span>20</span>
+      <br />
+
+      <label for="dob">Date of Birth:</label>
+      <input type="date" name="dob" min="2013-01-04" max="2024-03-31" />
+      <br />
+
+      <input type="submit" value="Submit" />
+    </form>
+  </body>
+</html>

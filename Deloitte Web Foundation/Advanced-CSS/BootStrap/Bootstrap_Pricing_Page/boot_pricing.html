@@ -1,0 +1,1026 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BootStrap Pricing Page</title>
+    <!-- BootStrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css"
+      integrity="sha512-b2QcS5SsA8tZodcDtGRELiGv5SaKSk1vDHDaQRda0htPYWZ6046lr3kJ5bAAQdpV2mmA/4v0wQF9MyU6/pDIAg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+
+    <!-- BootStrap JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  </head>
+
+  <body class="bg-secondary-subtle">
+    <div class="container-fluid p-0 row">
+      <div class="col-1 position-relative">
+        <div class="container-fluid mt-2">
+          <div class="offcanvas-btn-box">
+            <button
+              class="btn btn-primary rounded-circle d-none d-lg-block position-absolute"
+              type="button"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#offcanvasScrolling"
+            >
+              <span>&lt;</span>
+              <!-- <span>&gt;</span> -->
+            </button>
+          </div>
+        </div>
+
+        <div
+          class="offcanvas offcanvas-start"
+          data-bs-scroll="true"
+          data-bs-backdrop="false"
+          tabindex="-1"
+          id="offcanvasScrolling"
+          aria-labelledby="offcanvasScrollingLabel"
+        >
+          <div class="offcanvas-header pe-0">
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            ></button>
+          </div>
+
+          <div class="offcanvas-body p-0">
+            <div class="accordion accordion-flush" id="accordionFlushExample">
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed text-secondary"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseOne"
+                    aria-expanded="false"
+                    aria-controls="flush-collapseOne"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      class="bi bi-file-break me-3"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M0 10.5a.5.5 0 0 1 .5-.5h15a.5.5 0 0 1 0 1H.5a.5.5 0 0 1-.5-.5M12 0H4a2 2 0 0 0-2 2v7h1V2a1 1 0 0 1 1-1h8a1 1 0 0 1 1 1v7h1V2a2 2 0 0 0-2-2m2 12h-1v2a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-2H2v2a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2z"
+                      />
+                    </svg>
+                    Pages
+                  </button>
+                </h2>
+                <div
+                  id="flush-collapseOne"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionFlushExample"
+                >
+                  <div class="accordion-body p-0">
+                    <ul class="text-start text-secondary">
+                      <li>User profile</li>
+                      <li>Account settings</li>
+                      <li>FAQ</li>
+                      <li>Pricing</li>
+                      <li>Misc</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed text-secondary"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseTwo"
+                    aria-expanded="false"
+                    aria-controls="flush-collapseTwo"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      class="bi bi-bag me-3"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1m3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1z"
+                      />
+                    </svg>
+                    Authentications
+                  </button>
+                </h2>
+                <div
+                  id="flush-collapseTwo"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionFlushExample"
+                >
+                  <div class="accordion-body text-secondary">
+                    This section is for Authentications.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed text-secondary"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseThree"
+                    aria-expanded="false"
+                    aria-controls="flush-collapseTwo"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      class="bi bi-card-list me-3"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M14.5 3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2z"
+                      />
+                      <path
+                        d="M5 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 5 8m0-2.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5m0 5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5m-1-5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0M4 8a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0m0 2.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0"
+                      />
+                    </svg>
+                    Wizard Examples
+                  </button>
+                </h2>
+                <div
+                  id="flush-collapseThree"
+                  class="accordion-collapse collapse text-secondary"
+                  data-bs-parent="#accordionFlushExample"
+                >
+                  <div class="accordion-body">
+                    This section is for Wizard Examples.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed text-secondary"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseFour"
+                    aria-expanded="false"
+                    aria-controls="flush-collapseTwo"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      class="bi bi-box-arrow-in-up me-3"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M3.5 10a.5.5 0 0 1-.5-.5v-8a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 .5.5v8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 0 0 1h2A1.5 1.5 0 0 0 14 9.5v-8A1.5 1.5 0 0 0 12.5 0h-9A1.5 1.5 0 0 0 2 1.5v8A1.5 1.5 0 0 0 3.5 11h2a.5.5 0 0 0 0-1z"
+                      />
+                      <path
+                        fill-rule="evenodd"
+                        d="M7.646 4.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707V14.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708z"
+                      />
+                    </svg>
+                    Modal Examples
+                  </button>
+                </h2>
+                <div
+                  id="flush-collapseFour"
+                  class="accordion-collapse collapse text-secondary"
+                  data-bs-parent="#accordionFlushExample"
+                >
+                  <div class="accordion-body">
+                    This section is for Modal Examples.
+                  </div>
+                </div>
+              </div>
+
+              <h6 class="text-uppercase my-5 mx-3 text-body-tertiary">
+                components
+              </h6>
+
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed text-secondary"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#cards"
+                    aria-expanded="false"
+                    aria-controls="flush-collapseTwo"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      class="bi bi-collection me-3"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M2.5 3.5a.5.5 0 0 1 0-1h11a.5.5 0 0 1 0 1zm2-2a.5.5 0 0 1 0-1h7a.5.5 0 0 1 0 1zM0 13a1.5 1.5 0 0 0 1.5 1.5h13A1.5 1.5 0 0 0 16 13V6a1.5 1.5 0 0 0-1.5-1.5h-13A1.5 1.5 0 0 0 0 6zm1.5.5A.5.5 0 0 1 1 13V6a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-.5.5z"
+                      />
+                    </svg>
+                    Cards
+                    <div
+                      class="rounded-circle bg-danger text-light small py-1 px-2 position-absolute"
+                      style="margin-left: 250px"
+                    >
+                      6
+                    </div>
+                  </button>
+                </h2>
+                <div
+                  id="cards"
+                  class="accordion-collapse collapse text-secondary"
+                  data-bs-parent="#accordionFlushExample"
+                >
+                  <div class="accordion-body">This section is for Cards.</div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed text-secondary"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#ui"
+                    aria-expanded="false"
+                    aria-controls="flush-collapseTwo"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      class="bi bi-archive me-3"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M0 2a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1v7.5a2.5 2.5 0 0 1-2.5 2.5h-9A2.5 2.5 0 0 1 1 12.5V5a1 1 0 0 1-1-1zm2 3v7.5A1.5 1.5 0 0 0 3.5 14h9a1.5 1.5 0 0 0 1.5-1.5V5zm13-3H1v2h14zM5 7.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5"
+                      />
+                    </svg>
+                    User interface
+                  </button>
+                </h2>
+                <div
+                  id="ui"
+                  class="accordion-collapse collapse text-secondary"
+                  data-bs-parent="#accordionFlushExample"
+                >
+                  <div class="accordion-body">
+                    This section is for User Interface.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed text-secondary"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#extui"
+                    aria-expanded="false"
+                    aria-controls="flush-collapseTwo"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      class="bi bi-copy me-3"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M4 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 5a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1v-1h1v1a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h1v1z"
+                      />
+                    </svg>
+                    Extended UI
+                  </button>
+                </h2>
+                <div
+                  id="extui"
+                  class="accordion-collapse collapse text-secondary"
+                  data-bs-parent="#accordionFlushExample"
+                >
+                  <div class="accordion-body">
+                    This section is for Extended User Interface.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed text-secondary"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#icons"
+                    aria-expanded="false"
+                    aria-controls="flush-collapseTwo"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      class="bi bi-receipt-cutoff me-3"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M3 4.5a.5.5 0 0 1 .5-.5h6a.5.5 0 1 1 0 1h-6a.5.5 0 0 1-.5-.5m0 2a.5.5 0 0 1 .5-.5h6a.5.5 0 1 1 0 1h-6a.5.5 0 0 1-.5-.5m0 2a.5.5 0 0 1 .5-.5h6a.5.5 0 1 1 0 1h-6a.5.5 0 0 1-.5-.5m0 2a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5m0 2a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5M11.5 4a.5.5 0 0 0 0 1h1a.5.5 0 0 0 0-1zm0 2a.5.5 0 0 0 0 1h1a.5.5 0 0 0 0-1zm0 2a.5.5 0 0 0 0 1h1a.5.5 0 0 0 0-1zm0 2a.5.5 0 0 0 0 1h1a.5.5 0 0 0 0-1zm0 2a.5.5 0 0 0 0 1h1a.5.5 0 0 0 0-1z"
+                      />
+                      <path
+                        d="M2.354.646a.5.5 0 0 0-.801.13l-.5 1A.5.5 0 0 0 1 2v13H.5a.5.5 0 0 0 0 1h15a.5.5 0 0 0 0-1H15V2a.5.5 0 0 0-.053-.224l-.5-1a.5.5 0 0 0-.8-.13L13 1.293l-.646-.647a.5.5 0 0 0-.708 0L11 1.293l-.646-.647a.5.5 0 0 0-.708 0L9 1.293 8.354.646a.5.5 0 0 0-.708 0L7 1.293 6.354.646a.5.5 0 0 0-.708 0L5 1.293 4.354.646a.5.5 0 0 0-.708 0L3 1.293zm-.217 1.198.51.51a.5.5 0 0 0 .707 0L4 1.707l.646.647a.5.5 0 0 0 .708 0L6 1.707l.646.647a.5.5 0 0 0 .708 0L8 1.707l.646.647a.5.5 0 0 0 .708 0L10 1.707l.646.647a.5.5 0 0 0 .708 0L12 1.707l.646.647a.5.5 0 0 0 .708 0l.509-.51.137.274V15H2V2.118l.137-.274z"
+                      />
+                    </svg>
+                    Icons
+                  </button>
+                </h2>
+                <div
+                  id="icons"
+                  class="accordion-collapse collapse text-secondary"
+                  data-bs-parent="#accordionFlushExample"
+                >
+                  <div class="accordion-body">This section is for Icons.</div>
+                </div>
+              </div>
+
+              <h6 class="text-uppercase my-5 mx-3 text-body-tertiary">
+                Forms & tables
+              </h6>
+
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed text-secondary"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#formele"
+                    aria-expanded="false"
+                    aria-controls="flush-collapseTwo"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      class="bi bi-card-text me-3"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M14.5 3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2z"
+                      />
+                      <path
+                        d="M3 5.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5M3 8a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9A.5.5 0 0 1 3 8m0 2.5a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5"
+                      />
+                    </svg>
+                    Form Elements
+                  </button>
+                </h2>
+                <div
+                  id="formele"
+                  class="accordion-collapse collapse text-secondary"
+                  data-bs-parent="#accordionFlushExample"
+                >
+                  <div class="accordion-body">
+                    This section is for form elements.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed text-secondary"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#formlayout"
+                    aria-expanded="false"
+                    aria-controls="flush-collapseTwo"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      class="bi bi-card-heading me-3"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M14.5 3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2z"
+                      />
+                      <path
+                        d="M3 8.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5m0 2a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5m0-5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5z"
+                      />
+                    </svg>
+                    Form Layouts
+                  </button>
+                </h2>
+                <div
+                  id="formlayout"
+                  class="accordion-collapse collapse text-secondary"
+                  data-bs-parent="#accordionFlushExample"
+                >
+                  <div class="accordion-body">
+                    This section is for form layouts.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container col-11">
+        <div class="row">
+          <div class="col-12">
+            <form class="position-relative">
+              <input
+                type="text"
+                class="position-absolute form-control mt-2"
+                style="padding: 5px 50px"
+              />
+              <!-- <div class="position-relative"> -->
+              <div class="position-absolute start-0 ms-2 mt-2">
+                <span
+                  data-bs-toggle="offcanvas"
+                  data-bs-target="#offcanvasScrolling"
+                  aria-controls="offcanvasScrolling"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="grey"
+                    class="bi bi-list me-1 d-lg-none"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"
+                    />
+                  </svg>
+                </span>
+
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="grey"
+                  class="bi bi-search"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"
+                  />
+                </svg>
+              </div>
+              <div class="position-absolute end-0 me-2 mt-2">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="grey"
+                  class="bi bi-globe me-1"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm7.5-6.923c-.67.204-1.335.82-1.887 1.855A7.97 7.97 0 0 0 5.145 4H7.5V1.077zM4.09 4a9.267 9.267 0 0 1 .64-1.539 6.7 6.7 0 0 1 .597-.933A7.025 7.025 0 0 0 2.255 4H4.09zm-.582 3.5c.03-.877.138-1.718.312-2.5H1.674a6.958 6.958 0 0 0-.656 2.5h2.49zM4.847 5a12.5 12.5 0 0 0-.338 2.5H7.5V5H4.847zM8.5 5v2.5h2.99a12.495 12.495 0 0 0-.337-2.5H8.5zM4.51 8.5a12.5 12.5 0 0 0 .337 2.5H7.5V8.5H4.51zm3.99 0V11h2.653c.187-.765.306-1.608.338-2.5H8.5zM5.145 12c.138.386.295.744.468 1.068.552 1.035 1.218 1.65 1.887 1.855V12H5.145zm.182 2.472a6.696 6.696 0 0 1-.597-.933A9.268 9.268 0 0 1 4.09 12H2.255a7.024 7.024 0 0 0 3.072 2.472zM3.82 11a13.652 13.652 0 0 1-.312-2.5h-2.49c.062.89.291 1.733.656 2.5H3.82zm6.853 3.472A7.024 7.024 0 0 0 13.745 12H11.91a9.27 9.27 0 0 1-.64 1.539 6.688 6.688 0 0 1-.597.933zM8.5 12v2.923c.67-.204 1.335-.82 1.887-1.855.173-.324.33-.682.468-1.068H8.5zm3.68-1h2.146c.365-.767.594-1.61.656-2.5h-2.49a13.65 13.65 0 0 1-.312 2.5zm2.802-3.5a6.959 6.959 0 0 0-.656-2.5H12.18c.174.782.282 1.623.312 2.5h2.49zM11.27 2.461c.247.464.462.98.64 1.539h1.835a7.024 7.024 0 0 0-3.072-2.472c.218.284.418.598.597.933zM10.855 4a7.966 7.966 0 0 0-.468-1.068C9.835 1.897 9.17 1.282 8.5 1.077V4h2.355z"
+                  />
+                </svg>
+
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="grey"
+                  class="bi bi-grid"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M1 2.5A1.5 1.5 0 0 1 2.5 1h3A1.5 1.5 0 0 1 7 2.5v3A1.5 1.5 0 0 1 5.5 7h-3A1.5 1.5 0 0 1 1 5.5v-3zM2.5 2a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zm6.5.5A1.5 1.5 0 0 1 10.5 1h3A1.5 1.5 0 0 1 15 2.5v3A1.5 1.5 0 0 1 13.5 7h-3A1.5 1.5 0 0 1 9 5.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zM1 10.5A1.5 1.5 0 0 1 2.5 9h3A1.5 1.5 0 0 1 7 10.5v3A1.5 1.5 0 0 1 5.5 15h-3A1.5 1.5 0 0 1 1 13.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zm6.5.5A1.5 1.5 0 0 1 10.5 9h3a1.5 1.5 0 0 1 1.5 1.5v3a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 9 13.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3z"
+                  />
+                </svg>
+
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="grey"
+                  class="bi bi-brightness-low"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8zm.5-9.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zm0 11a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zm5-5a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1zm-11 0a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1zm9.743-4.036a.5.5 0 1 1-.707-.707.5.5 0 0 1 .707.707zm-7.779 7.779a.5.5 0 1 1-.707-.707.5.5 0 0 1 .707.707zm7.072 0a.5.5 0 1 1 .707-.707.5.5 0 0 1-.707.707zM3.757 4.464a.5.5 0 1 1 .707-.707.5.5 0 0 1-.707.707z"
+                  />
+                </svg>
+
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="grey"
+                  class="bi bi-bell"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zM8 1.918l-.797.161A4.002 4.002 0 0 0 4 6c0 .628-.134 2.197-.459 3.742-.16.767-.376 1.566-.663 2.258h10.244c-.287-.692-.502-1.49-.663-2.258C12.134 8.197 12 6.628 12 6a4.002 4.002 0 0 0-3.203-3.92L8 1.917zM14.22 12c.223.447.481.801.78 1H1c.299-.199.557-.553.78-1C2.68 10.2 3 6.88 3 6c0-2.42 1.72-4.44 4.005-4.901a1 1 0 1 1 1.99 0A5.002 5.002 0 0 1 13 6c0 .88.32 4.2 1.22 6z"
+                  />
+                </svg>
+
+                <div
+                  class="position-absolute bg-danger rounded-circle text-center bottom-50 text-light"
+                  style="font-size: 7px; width: 11px; height: 11px; right: 25px"
+                >
+                  5
+                </div>
+
+                <img
+                  src="./avatar.jpg"
+                  alt="avatar"
+                  class="rounded-circle"
+                  style="width: 25px; height: 25px"
+                />
+
+                <div
+                  class="position-absolute bg-success rounded-circle"
+                  style="
+                    font-size: 7px;
+                    width: 7px;
+                    height: 7px;
+                    right: 0px;
+                    bottom: 2px;
+                  "
+                ></div>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <div class="row mt-5 bg-white mx-0 rounded text-center pt-4">
+          <div class="col-12">
+            <h4>Find the right plan for your site</h4>
+
+            <p class="small text-secondary mb-5">
+              Get started with us. It's perfect for individuals and teams.
+              Choose a subscription plan that meets your needs.
+            </p>
+
+            <div class="position-relative">
+              <div class="position-absolute" style="left: 53%; bottom: 17%">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-arrow-90deg-down m-0"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M4.854 14.854a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L4 13.293V3.5A2.5 2.5 0 0 1 6.5 1h8a.5.5 0 0 1 0 1h-8A1.5 1.5 0 0 0 5 3.5v9.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4z"
+                  />
+                </svg>
+
+                <span
+                  class="text-primary bg-primary-subtle text-uppercase small m-0"
+                  >Save upto 10%</span
+                >
+              </div>
+            </div>
+
+            <div class="d-flex justify-content-center small text-secondary">
+              <span>Monthly</span>
+              <div class="form-check form-switch d-flex justify-content-center">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  role="switch"
+                  id="flexSwitchCheckChecked"
+                  checked
+                />
+              </div>
+              <span>Annually</span>
+            </div>
+
+            <div
+              class="d-flex flex-column flex-lg-row my-4 mx-4 small justify-content-between gap-3"
+            >
+              <div
+                class="rounded border border-2 border-tertiary px-4 flex-fill"
+              >
+                <div
+                  class="d-flex flex-column justify-content-center align-items-center m-3"
+                >
+                  <div class="bg-primary-subtle rounded-circle px-3 py-2">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="#0d6efd"
+                      class="bi bi-front"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M0 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v2h2a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2H2a2 2 0 0 1-2-2V2zm5 10v2a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V6a1 1 0 0 0-1-1h-2v5a2 2 0 0 1-2 2H5z"
+                      />
+                    </svg>
+                  </div>
+                  <h4>Basic</h4>
+                  <p class="small text-secondary">
+                    A simple start for everyone
+                  </p>
+                  <div class="text-center">
+                    <p
+                      class="text-body-tertiary small d-flex align-items-end mb-0"
+                    >
+                      <span class="text-primary fs-1 d-flex align-items-center"
+                        ><sup class="small" style="font-size: 12px">$</sup
+                        >0</span
+                      >/month
+                    </p>
+                    <p class="text-body-tertiary small">Free</p>
+                  </div>
+                </div>
+
+                <ul class="list-unstyled text-secondary mx-2 text-start">
+                  <li>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="#91B9F2"
+                      class="bi bi-check-circle-fill"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"
+                      />
+                    </svg>
+                    100 response a month
+                  </li>
+                  <li>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="#91B9F2"
+                      class="bi bi-check-circle-fill"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"
+                      />
+                    </svg>
+                    Unlimited forms and surveys
+                  </li>
+                  <li>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="#91B9F2"
+                      class="bi bi-check-circle-fill"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"
+                      />
+                    </svg>
+                    Unlimited fields
+                  </li>
+                  <li>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="#91B9F2"
+                      class="bi bi-check-circle-fill"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"
+                      />
+                    </svg>
+                    Basic form creation tools
+                  </li>
+                  <li>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="#91B9F2"
+                      class="bi bi-check-circle-fill"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"
+                      />
+                    </svg>
+                    Upto 2 subdomains
+                  </li>
+                </ul>
+
+                <button
+                  class="bg-success-subtle col-12 text-success rounded border-0 my-3 py-2"
+                >
+                  Your current plan
+                </button>
+              </div>
+
+              <div
+                class="rounded border border-2 border-primary px-4 flex-fill"
+              >
+                <div
+                  class="d-flex flex-column justify-content-center align-items-center m-3"
+                >
+                  <div class="bg-primary-subtle rounded-circle px-3 py-2">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="#0d6efd"
+                      class="bi bi-folder-fill"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M9.828 3h3.982a2 2 0 0 1 1.992 2.181l-.637 7A2 2 0 0 1 13.174 14H2.825a2 2 0 0 1-1.991-1.819l-.637-7a1.99 1.99 0 0 1 .342-1.31L.5 3a2 2 0 0 1 2-2h3.672a2 2 0 0 1 1.414.586l.828.828A2 2 0 0 0 9.828 3zm-8.322.12C1.72 3.042 1.95 3 2.19 3h5.396l-.707-.707A1 1 0 0 0 6.172 2H2.5a1 1 0 0 0-1 .981l.006.139z"
+                      />
+                    </svg>
+                  </div>
+                  <h4>Pro</h4>
+                  <p class="small text-secondary">
+                    For small to medium businesses
+                  </p>
+                  <div class="text-center">
+                    <p
+                      class="text-body-tertiary small d-flex align-items-end mb-0"
+                    >
+                      <span class="text-primary fs-1 d-flex align-items-center"
+                        ><sup class="small" style="font-size: 12px">$</sup
+                        >42</span
+                      >/month
+                    </p>
+                    <p class="text-body-tertiary small">$499/year</p>
+                  </div>
+                </div>
+
+                <ul class="list-unstyled text-secondary mx-2 text-start">
+                  <li>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="#91B9F2"
+                      class="bi bi-check-circle-fill"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"
+                      />
+                    </svg>
+                    Upto 5 users
+                  </li>
+                  <li>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="#91B9F2"
+                      class="bi bi-check-circle-fill"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"
+                      />
+                    </svg>
+                    120+ components
+                  </li>
+                  <li>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="#91B9F2"
+                      class="bi bi-check-circle-fill"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"
+                      />
+                    </svg>
+                    Basic support on Github
+                  </li>
+                  <li>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="#91B9F2"
+                      class="bi bi-check-circle-fill"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"
+                      />
+                    </svg>
+                    Monthly updates
+                  </li>
+                  <li>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="#91B9F2"
+                      class="bi bi-check-circle-fill"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"
+                      />
+                    </svg>
+                    Integrations
+                  </li>
+                </ul>
+
+                <button
+                  class="bg-primary col-12 text-light rounded border-0 my-3 py-2"
+                >
+                  Upgrade
+                </button>
+              </div>
+
+              <div
+                class="rounded border border-2 border-tertiary px-4 flex-fill"
+              >
+                <div
+                  class="d-flex flex-column justify-content-center align-items-center m-3"
+                >
+                  <div class="bg-primary-subtle rounded-circle px-3 py-2">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="#0d6efd"
+                      class="bi bi-briefcase-fill"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M6.5 1A1.5 1.5 0 0 0 5 2.5V3H1.5A1.5 1.5 0 0 0 0 4.5v1.384l7.614 2.03a1.5 1.5 0 0 0 .772 0L16 5.884V4.5A1.5 1.5 0 0 0 14.5 3H11v-.5A1.5 1.5 0 0 0 9.5 1h-3zm0 1h3a.5.5 0 0 1 .5.5V3H6v-.5a.5.5 0 0 1 .5-.5z"
+                      />
+                      <path
+                        d="M0 12.5A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5V6.85L8.129 8.947a.5.5 0 0 1-.258 0L0 6.85v5.65z"
+                      />
+                    </svg>
+                  </div>
+                  <h4>Enterprise</h4>
+                  <p class="small text-secondary">
+                    Solution for big organizations
+                  </p>
+                  <div class="text-center">
+                    <p
+                      class="text-body-tertiary small d-flex align-items-end mb-0"
+                    >
+                      <span class="text-primary fs-1 d-flex align-items-center"
+                        ><sup class="small" style="font-size: 12px">$</sup
+                        >84</span
+                      >/month
+                    </p>
+                    <p class="text-body-tertiary small">$999/year</p>
+                  </div>
+                </div>
+
+                <ul class="list-unstyled text-secondary mx-2 text-start">
+                  <li>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="#91B9F2"
+                      class="bi bi-check-circle-fill"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"
+                      />
+                    </svg>
+                    Up to 10 users
+                  </li>
+                  <li>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="#91B9F2"
+                      class="bi bi-check-circle-fill"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"
+                      />
+                    </svg>
+                    150+ components
+                  </li>
+                  <li>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="#91B9F2"
+                      class="bi bi-check-circle-fill"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"
+                      />
+                    </svg>
+                    Basic support on Github
+                  </li>
+                  <li>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="#91B9F2"
+                      class="bi bi-check-circle-fill"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"
+                      />
+                    </svg>
+                    Monthly updates
+                  </li>
+                  <li>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="#91B9F2"
+                      class="bi bi-check-circle-fill"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"
+                      />
+                    </svg>
+                    Speedy built tooling
+                  </li>
+                </ul>
+
+                <button
+                  class="bg-primary-subtle col-12 text-primary rounded border-0 my-3 py-2"
+                >
+                  Upgrade
+                </button>
+              </div>
+            </div>
+
+            <button
+              class="btn btn-danger text-light position-fixed end-0 me-4"
+              style="box-shadow: 0px 0px 20px 3px red; bottom: 35%"
+            >
+              Buy now
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>

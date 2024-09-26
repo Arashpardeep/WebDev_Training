@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="p1">para 1</p>
+    <input type="text" id="txt1" />
+
+    <input type="number" id="num1" class="p2" />
+    <input type="number" id="num2" class="p2" />
+    <button onclick="sum()">Find the Sum</button>
+    <button onmouseover="changeStyle()" onmouseleave="backStyle()">
+      Change The File
+    </button>
+
+    <img src="./first.jpg" alt="first image" id="first" />
+    <button onclick="chgimg()">Change Image</button>
+    <script>
+      document.getElementById("p1").innerText = "New text";
+      document.getElementById("txt1").value = "New inner text";
+
+      var a = document.getElementById("num1");
+      var b = document.getElementById("num2");
+
+      function sum() {
+        alert(parseInt(a.value) + parseInt(b.value));
+      }
+
+      var x = document.querySelectorAll(".p2");
+
+      for (i = 0; i < x.length; i++) {
+        x[i].style.backgroundColor = "yellow";
+      }
+
+      function changeStyle() {
+        for (i = 0; i < x.length; i++) {
+          x[i].style.backgroundColor = "red";
+        }
+      }
+
+      function backStyle() {
+        for (i = 0; i < x.length; i++) {
+          x[i].style.backgroundColor = "yellow";
+        }
+      }
+
+      var image = document.querySelector("#first");
+      var src1 = "./first.jpg";
+      var src2 = "./second.jpg";
+      var currentimg = src1;
+
+      function chgimg() {
+        if (currentimg == src1) {
+          currentimg = src2;
+          image.src = src2;
+        } else {
+          currentimg = src1;
+          image.src = src1;
+        }
+      }
+    </script>
+  </body>
+</html>

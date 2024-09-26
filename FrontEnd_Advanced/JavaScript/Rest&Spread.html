@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /* Rest Operator */
+      function Add(...a) {
+        sum = 0;
+        for (i of a) {
+          sum += i;
+        }
+        return sum;
+      }
+
+      var A = new Set([1, 2, 3, 4, 5]);
+
+      /* Spread Operator */
+      const x = [...A];
+      console.log(Add(2, 3, 4, 5, 6));
+      console.log(Add(2, 3));
+      console.log(Add(2, 3, 4));
+
+      var t = [2, 3, 4, 5, 6];
+      console.log(Add(t));
+
+      const [a, b, ...c] = t;
+      console.log(a);
+      console.log(b);
+      console.log(c);
+
+      // Destructuring
+      user = { id: 1, name: "John", age: 22 };
+      const { id, name } = user; // The parameter names should match with the key names in object
+      console.log(id);
+    </script>
+  </body>
+</html>

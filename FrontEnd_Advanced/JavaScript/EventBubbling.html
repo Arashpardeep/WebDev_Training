@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <style>
+    .grandparent {
+      display: flex;
+      width: 600px;
+      height: 600px;
+      background-color: purple;
+      margin: auto;
+    }
+
+    .parent {
+      display: flex;
+      width: 400px;
+      height: 400px;
+      background-color: green;
+      margin: auto;
+    }
+
+    .child {
+      display: flex;
+      height: 200px;
+      width: 200px;
+      background-color: yellow;
+      margin: auto;
+    }
+  </style>
+
+  <body>
+    <div class="grandparent">
+      <div class="parent">
+        <div class="child"></div>
+      </div>
+    </div>
+
+    <script>
+      //   When we are clicking on a child class, all its parent classes also called, it is called Event Bubbling
+
+      /* 
+      3 phases:
+      1) Bubble Phase - 3
+      2) Target Phase - 2
+      3) Capture Phase - 1
+    */
+
+      var grandparent = document.querySelector(".grandparent");
+      var parent = document.querySelector(".parent");
+      var child = document.querySelector(".child");
+
+      grandparent.addEventListener("click", function () {
+        console.log("grandparent clicked");
+        console.log("Grandparent Event phase:" + event.eventPhase);
+      });
+
+      parent.addEventListener("click", function () {
+        console.log("parent clicked");
+        console.log("parent Event phase:" + event.eventPhase);
+        event.stopPropagation();
+      });
+
+      child.addEventListener("click", function () {
+        console.log("child clicked");
+        console.log("child Event phase:" + event.eventPhase);
+      });
+
+      child.addEventListener("click", function () {
+        console.log("child clicked 2");
+        console.log("child Event phase:" + event.eventPhase);
+        event.stopImmediatePropagation();
+      });
+
+      child.addEventListener("click", function () {
+        console.log("child clicked 3");
+        console.log("child Event phase:" + event.eventPhase);
+      });
+
+      // If we put true or {capture: true}, it means it is in capture phase
+      // event.stopPropagation() is to stop the propagation
+      // event.stopImmediatePropagation() is to stop additional but same events if same element has more than one events which are below it
+    </script>
+  </body>
+</html>

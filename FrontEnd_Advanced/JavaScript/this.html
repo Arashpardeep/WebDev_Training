@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const person = {
+            fname: 'Sam',
+            lname: 'Jones',
+            // display: function(){
+            //     console.log(this);
+            // }
+                // Here in any normal function rather than arrow function, 'this' value is changed according to the context, as here it points to person object
+
+            display: () => {
+                console.log(this);
+            }
+            // Here in arrow function, context of 'this' never changed, it is always the global variable, which is windows 
+
+        }
+
+        person.display();
+    </script>
+</body>
+</html>

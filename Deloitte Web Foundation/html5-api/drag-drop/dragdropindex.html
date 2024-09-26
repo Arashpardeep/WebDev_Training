@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Drag Drop Demo</title>
+  </head>
+
+  <style>
+    .container {
+      width: 400px;
+      height: 400px;
+      background-color: lightgrey;
+      border: 2px red wavy;
+    }
+    img {
+      width: 200px;
+    }
+  </style>
+
+  <body>
+    <h1>Drag Drop Demo</h1>
+
+    <div class="container"></div>
+
+    <img
+      src="../../Basics/images/dummy.jpg"
+      alt="A draggable Image"
+      draggable="true"
+      id="imgId"
+    />
+
+    <script>
+      var container = document.querySelector(".container");
+      var imgEl = document.querySelector("#imgId");
+
+      imgEl.addEventListener("dragstart", function (event) {
+        console.log("DRAG START EVENT: ", event);
+        console.log("Image: Drag Start");
+        var imageId = event.target.id;
+        event.dataTransfer.setData("text", imageId);
+        event.dataTransfer.dragEffects = "move";
+      });
+
+      imgEl.addEventListener("dragenter", function (event) {
+        console.log("Image: Drag Enter");
+      });
+
+      imgEl.addEventListener("dragend", function (event) {
+        console.log("Image: Drag End");
+      });
+
+      container.addEventListener("dragover", function (event) {
+        console.log("EVENT: ", event);
+        event.preventDefault();
+        console.log("Container: Drag Over");
+      });
+
+      container.addEventListener("drop", function (event) {
+        var imageId = event.dataTransfer.getData("text");
+        var img = document.getElementById(imageId);
+        event.target.appendChild(img);
+        console.log("Container: Drop");
+      });
+    </script>
+  </body>
+</html>

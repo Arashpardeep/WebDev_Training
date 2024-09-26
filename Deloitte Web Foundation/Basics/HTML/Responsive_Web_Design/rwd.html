@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Web Design</title>
+  </head>
+
+  <style>
+    html {
+      font-size: 62.5%; /* ((10/16) = 62.5); Here we are making the font of root element as 10px from the default 16px, so to easy the calculations */
+    }
+
+    div {
+      font-size: 2.4rem;
+    }
+
+    .img-container {
+      border: 1px slid grey;
+      /* width: 400px;
+      height: 400px; */
+    }
+
+    img {
+      max-width: 80%;
+    }
+
+    @media only screen and (max-width: 1280px) {
+      body {
+        background-color: pink;
+      }
+
+      html {
+        font-size: 100%;
+      }
+    }
+
+    @media only screen and (max-width: 992px) {
+      body {
+        background-color: goldenrod;
+      }
+    }
+
+    @media only screen and (max-width: 768px) {
+      body {
+        background-color: yellow;
+      }
+
+      html {
+        font-size: 62.5%;
+      }
+    }
+
+    @media only screen and (max-width: 576px) {
+      body {
+        background-color: blue;
+      }
+
+      html {
+        font-size: 50%;
+      }
+    }
+  </style>
+
+  <body>
+    <div>
+      <img src="../../images/unsplash.jpg" alt="A nature image" />
+    </div>
+    <div>
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa, nulla
+        laudantium molestias libero quam minus?
+      </p>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" name="txt1" id="txt1" onkeyup="enterpara()" />
+    <p id="para"></p>
+
+    <div class="newdiv"></div>
+
+    <label for="txt2">name1:</label>
+    <input type="text" id="txt2" />
+
+    <button class="removeit" onclick="removeit()">Remove the element</button>
+
+    <button onclick="replacepara()">Replace the para</button>
+
+    <script>
+      var inp = document.getElementById("txt1");
+      var para = document.getElementById("para");
+      function enterpara() {
+        para.innerText = inp.value;
+      }
+
+      var para = document.createElement("p");
+      para.setAttribute("id", "para1");
+      para.setAttribute("class", "para");
+      para.innerText = "jhrfkrthgkltrt";
+
+      var heading = document.createElement("h1");
+      heading.setAttribute("id", "head1");
+      heading.setAttribute("class", "heading");
+      heading.innerText = "Heading";
+
+      var para2 = document.createElement("p");
+      para2.setAttribute("id", "para2");
+      para2.setAttribute("class", "para");
+
+      var lbl = document.createElement("label");
+      var ipt = document.createElement("input");
+
+      var newdiv = document.getElementsByClassName("newdiv")[0];
+      newdiv.appendChild(heading);
+      newdiv.appendChild(para);
+      newdiv.appendChild(para2);
+
+      lbl.setAttribute("for", "newpara");
+      lbl.innerText = "Name: ";
+      ipt.setAttribute("id", "newpara");
+      para2.appendChild(lbl);
+      para2.appendChild(ipt);
+
+      var replacable = document.createElement("h2");
+      replacable.innerText = "This is a replacable heading";
+      replacable.setAttribute("id", "replacable");
+      newdiv.appendChild(replacable);
+
+      var rplc = document.getElementById("replacable");
+
+      function removeit() {
+        newdiv.removeChild(para);
+      }
+
+      function replacepara() {
+        newdiv.replaceChild(rplc, para2);
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      message();
+
+      function message() {
+        console.log("hi");
+      }
+
+      // functions also hoisted in javascript, means the position where we call it doesn't matter where we call it whether before or after defining it
+
+      //   message1(); // This give the error
+
+      const message1 = function () {
+        console.log("Hello");
+      };
+
+      message1();
+
+      // Function Expressions or anonymous functions are never hoisted, whether declared using var, let or const, so we have to call it after defining it always.
+
+      //   Arrow Functions
+      var message2 = () => {
+        console.log("Hello Arrow");
+      };
+
+      message2();
+
+      var mesg = () => "Hello World";
+
+      console.log(mesg);
+
+      var add = (x, y) => x + y;
+      console.log(add(3, 4));
+
+      var sum = function add(x, y) {
+        return x + y;
+      };
+
+      console.log(sum(1, 2));
+
+      var A = [1, 2, 3, 4, 5, 6, 7, 8];
+
+      A.forEach((X) => {
+        console.log(X);
+      });
+
+      var res = A.filter((y) => {
+        return y % 5 == 0;
+      });
+
+      console.log(res + "hi");
+
+      var res1 = A.reduce((x, y) => {
+        return x + y; // Here x is pointing to array and y is pointing to some variable in which we are storing the value
+      }, 0);
+
+      console.log(res1);
+
+      var res2 = A.find((a) => {
+        return a % 3 == 0; // 'filter' will gives an array of all elements according to condition, but 'find' only finds the first element which satisfies the condition and then stops finding it, so gives only single value.
+      });
+
+      //   Immediately invoked funvctions, which only works on function expressions
+      var msg = (function msg() {
+        console.log("Invoked");
+      })();
+
+      var chgbgcolor = (function chgbgcolor() {
+        document.body.style.backgroundColor = "pink";
+        document.querySelector("body").style.backgroundColor = "beige";
+      })();
+
+      var courses = [
+        { id: 1, Name: "C", Fees: 2000 },
+        { id: 2, Name: "C++", Fees: 2500 },
+        { id: 3, Name: "C#", Fees: 5000 },
+        { id: 4, Name: "Java", Fees: 3000 },
+        { id: 5, Name: "PHP", Fees: 1000 },
+        { id: 6, Name: "Python", Fees: 2000 },
+      ];
+
+      var selectedCourses = courses.filter((y) => y.Fees > 2000);
+
+      console.log(selectedCourses);
+
+      class Product {
+        constructor(id, name, price, quantity, description) {
+          this.id = id;
+          this.name = name;
+          this.price = price;
+          this.quantity = quantity;
+          this.description = description;
+        }
+
+        display() {
+          console.log(this.id);
+          console.log(this.name);
+          console.log(this.price);
+          console.log(this.quantity);
+          console.log(this.description);
+        }
+
+        calculatedDiscount() {
+          var discount = 0.1 * this.price;
+          // console.log(discount);
+          return discount;
+        }
+
+        totalSales() {
+          // console.log(this.calculatedDiscount());
+          var discountPrice = this.price - this.calculatedDiscount();
+          var finalSales = discountPrice * this.quantity;
+          return finalSales;
+        }
+      }
+
+      var product = new Product(
+        1,
+        "T-shirt",
+        2000,
+        5,
+        "A white colored long neck T-shirt"
+      );
+      product.display();
+      // product.calculatedDiscount();
+      var tot = product.totalSales();
+      console.log(`Total profit is: ${tot}`);
+    </script>
+  </body>
+</html>

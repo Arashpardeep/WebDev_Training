@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+  </head>
+  <body>
+    <!-- This is outside main div.
+
+    <div class="maindiv">
+      This is inside maindiv
+      <div class="div1">
+        This is div1
+        <p class="p1">This is inside div</p>
+      </div>
+    </div> -->
+
+    <table>
+      <tbody>
+        <tr>
+          <td class="selectedtd">1</td>
+          <td>2</td>
+          <td>3</td>
+          <td>4</td>
+          <td>5</td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td>7</td>
+          <td>8</td>
+          <td>9</td>
+          <td>10</td>
+        </tr>
+        <tr>
+          <td>11</td>
+          <td>12</td>
+          <td>13</td>
+          <td>14</td>
+          <td>15</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <script>
+      $(function () {
+        // $(".p1").parent().css("background-color", "orange"); // add class on direct parent only
+        // $(".p1").parents().css("border", "2px solid red"); // add class to every parent of the selected element
+        // $(".p1").parentsUntil(".maindiv").css("color", "green"); // add class to parents upto the parent which is mentioned inside parentsuntil but excluding that one, means it will apply upto one below class of the mentioned one.
+
+        // $(".maindiv").children().css("border", "1px solid blue");
+
+        /* TRAVERSING:
+
+             Parent Traversal:
+                1) parent()
+                2) parents()
+                3) parentsuntil()
+
+             Children Traversal:
+                4) Children()
+
+             Sibling Traversal:
+                5) Sibling()
+                6) next()
+                7) nextAll()
+                8) nextUntil()
+                9) prev()
+                10) prevAll()
+                11) prevUntil()
+          */
+
+        $("table").css("border", "2px solid black");
+
+        $("tr").siblings(".selectedtd").css("background-color", "yellow");
+
+        $("td").next(".selectedtd").css("color", "red");
+
+        $("td").prev(".selectedtd").css("background-color", "green");
+
+        $("td").nextAll(".selectedtd").css("border", "2px solid blue");
+
+        $("td").prevAll(".selectedtd").css("font-weight", "bold");
+
+        $("td").nextUntil(".selectedtd").css("color", "red");
+      });
+    </script>
+  </body>
+</html>

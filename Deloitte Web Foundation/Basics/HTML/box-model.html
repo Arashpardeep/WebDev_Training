@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Box-Model Demo</title>
+  </head>
+
+  <style>
+    .container {
+      width: 200px;
+      padding: 10px;
+      height: 150px;
+      border: 2px solid red;
+      margin: 20px;
+      box-sizing: border-box;
+      display: inline-block;
+    }
+
+    .nav-link-one:link {
+      background-color: grey;
+      border: 1px solid black;
+      padding: 20px;
+      margin: 20px;
+    }
+
+    .nav-link-two:link {
+      background-color: grey;
+      border: 1px solid black;
+      padding: 20px;
+      margin: 20px;
+    }
+  </style>
+
+  <body>
+    <div class="container">
+      <a href="#" class="nav-link-one">Home</a>
+      <a href="#" class="nav-link-two">Home</a>
+    </div>
+    <div class="container">
+        <button class="btn">Submit</button>
+    </div>
+
+    <!-- Margins merge vertically but not horizontally, means when we put display: block, the two divs place vertically, the the margin between them is only 20px. But when you put display: inline-block, then both divs come in one line only and the margin between them is 20 + 20 = 40 only, then no merging take place horizontally. -->
+
+   
+  </body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Asynchronous Await</title>
+  </head>
+  <body>
+    <script>
+      function Register() {
+        return new Promise((resolve, reject) => {
+          console.log("Register");
+          resolve();
+        });
+      }
+
+      function SendEmail() {
+        return new Promise((resolve, reject) => {
+          setTimeout(() => {
+            console.log("Email sent");
+            resolve("Email sent successfully");
+          }, 3000);
+        });
+      }
+
+      function Login() {
+        return new Promise((resolve, reject) => {
+          console.log("Login");
+          reject("Login failed");
+        });
+      }
+
+      function DisplayUser() {
+        return new Promise((resolve, reject) => {
+          console.log("Display user info");
+          resolve();
+        });
+      }
+
+      async function Methodcalls() {
+        Register();
+        await SendEmail().then((s) => {
+          console.log(s);
+        });
+        await Login();
+        await DisplayUser();
+      }
+
+      Methodcalls();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,6 @@
+div {
+  -ms-background-color: linear-gradient(grey, rgb(247, 226, 226));
+  -o-background-color: linear-gradient(grey, rgb(247, 226, 226));
+  background-color: linear-gradient(grey, rgb(247, 226, 226)
+  );
+}

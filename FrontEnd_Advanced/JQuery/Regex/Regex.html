@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+  </head>
+  <body>
+    <p>
+      <label for="txt1">Name</label>
+      <input type="text" name="" id="txt1" />
+    </p>
+    <p>
+      <label for="txt2">Mobile</label>
+      <input type="text" name="" id="txt2" />
+    </p>
+    <p>
+      <input type="button" value="Validate" id="btn1" />
+    </p>
+    <script>
+      $(function () {
+        var txt1;
+        var txt2;
+        $("#btn1").click(function () {
+          txt1 = $("#txt1").val();
+          txt2 = $("#txt2").val();
+          var pattern1 = /^[A-Z]{1}[a-z]{5}$/;
+
+          if (!pattern1.test(txt1)) {
+            alert(pattern1.test(txt1));
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

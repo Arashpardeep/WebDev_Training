@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+       /* function foo(){
+            console.log(this); //Here 'this' refers to global windows object
+        } */
+
+       /* const person = {
+            fname: 'Sam',
+            lname: 'Jones',
+            display: function(){
+                console.log(this); // Here 'this' refers to Person object
+            }
+        } 
+        
+        person.display(); */
+
+       /* function Foo(){
+            console.log(this);
+        }
+
+        const fooobj = new Foo();
+        console.log(fooobj); */
+
+        const person = {
+            fname: 'Ram',
+            lname: 'Sharma'
+        }
+
+        
+        function display(){
+            consol.log(this.fname);
+            console.log(this.lname);
+            console.log(`${this.fname} is staying in ${city}`)
+        }
+        
+        // Bind: Will not call a function but will return the function
+        // Call: will immediately call the function also we can pass additional parameters
+        // Apply: is also same but it accepts additional parameters inside an array
+
+        
+    //    const output = display.bind(person);
+    //    output();
+
+    //    display.call(person, 'Mumbai');
+
+       display.apply(person1, ['Mumbai']);
+
+    </script>
+</body>
+</html>

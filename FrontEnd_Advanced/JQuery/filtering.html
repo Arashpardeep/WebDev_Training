@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+  </head>
+  <body>
+    <p class="p1">Para 1</p>
+    <p class="p2"><span>Hi </span>Para 2</p>
+    <p class="p3">Para 3</p>
+
+    <script>
+      /* 
+        FILTERING:
+                1) first()
+                2) last()
+                3) eq()
+                4) has()
+                5) not()
+                6)filter()
+        */
+
+      $(function () {
+        $("p").eq("0").css("color", "red");
+        $("p").filter(".p2").css("background-color", "green");
+        $("p").first().css("background-color", "yellow");
+        $("p").last().css("background-color", "beige");
+        $("p").has("span").css("color", "white");
+        $("p").not(".p2").css("font-weight", "bold");
+      });
+    </script>
+  </body>
+</html>

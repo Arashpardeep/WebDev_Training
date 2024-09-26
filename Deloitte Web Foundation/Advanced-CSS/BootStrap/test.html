@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bootstrap Offcanvas Example</title>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+
+  <div class="container-fluid">
+    <button class="btn btn-primary" data-toggle="offcanvas" data-target="#sidebar">Toggle Offcanvas</button>
+
+    <div class="row">
+      <div class="col-md-3 offcanvas-collapse" id="sidebar">
+        <button class="btn btn-secondary close-btn" data-toggle="offcanvas" data-target="#sidebar">&times;</button>
+        <!-- Offcanvas content goes here -->
+        <p>Offcanvas Content</p>
+      </div>
+
+      <div class="col-md-9" id="mainContent">
+        <!-- Main content goes here -->
+        <p>Main Content</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- jQuery, Popper.js, Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <script>
+    $(document).ready(function () {
+      $('[data-toggle="offcanvas"]').on('click', function () {
+        $('#sidebar, #mainContent').toggleClass('offcanvas-opened');
+      });
+    });
+  </script>
+</body>
+</html>

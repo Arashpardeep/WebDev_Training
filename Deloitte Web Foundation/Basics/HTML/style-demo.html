@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Styles Demo</title>
+    <link rel="stylesheet" href="../CSS/style.css" />
+    <style>
+      div {
+        margin: 24px;
+        padding: 24px;
+        width: 800px;
+      }
+
+      h2 {
+        background-color: gold;
+        text-align: center;
+      }
+
+      div > p {
+        color: blue;
+      }
+
+      h2 ~ p {
+        font-size: 1.4rem;
+      }
+
+      h2 + p {
+        border: 2px solid green;
+      }
+
+      p::first-line {
+        font-size: 2em;
+        color: aqua;
+      }
+
+      p::first-letter {
+        font-size: 2em;
+        color: rgb(255, 0, 60);
+      }
+
+      a:link {
+        text-decoration: none;
+        color: orange;
+        font-weight: 600;
+      }
+
+      a:visited {
+        color: rgb(23, 35, 76);
+      }
+
+      a:hover {
+        color: rgb(218, 32, 184);
+      }
+
+      a:active {
+        color: rgb(102, 128, 0);
+      }
+    </style>
+  </head>
+  <body>
+    <div style="border: 1px solid red">
+      <h2>Heading Info</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam quia
+        nihil dicta possimus sed dignissimos dolores voluptatum odio, quaerat
+        laudantium.
+      </p>
+      <ul>
+        <li>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate
+            doloribus a, et odio dolores tempore!
+          </p>
+        </li>
+      </ul>
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquid vel
+        veniam, deleniti similique reiciendis facere perferendis blanditiis
+        labore quis nemo corporis neque soluta nobis consectetur eligendi eaque
+        illum nostrum sit?
+      </p>
+
+      <p>
+        For More Info , please visit
+        <a href="https://www.google.com">Our Website</a>
+      </p>
+    </div>
+  </body>
+</html>

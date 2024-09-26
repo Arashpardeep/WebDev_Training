@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+  </head>
+  <body>
+    <p class="p1">This is para 1</p>
+
+    <script>
+      /*  
+        ADDING TEXT:
+            1) append()
+            2) after()
+            3) prepend()
+            4) before()
+     */
+
+      $(function () {
+        $(".p1").append("Some text atlast");
+        $(".p1").after("Text Inserted After");
+        $(".p1").prepend("Some text infront");
+        $(".p1").before("Text Inserted Before");
+      });
+    </script>
+  </body>
+</html>

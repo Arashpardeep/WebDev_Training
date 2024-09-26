@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FlexBox Flyer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <style>
+    body {
+      font-family: "Inter", sans-serif;
+      color: #222;
+    }
+
+    /* div {
+      border: 2px solid black;
+    } */
+
+    .flyer {
+      display: block;
+      width: 75%;
+      /* height: 100%; */
+      position: relative;
+      border: 1px solid black;
+      margin: auto;
+    }
+
+    .flyer .sale {
+      position: absolute;
+      top: 2px;
+      left: 2px;
+      padding: 6px 12px;
+      background-color: red;
+      color: #fff;
+      text-transform: uppercase;
+      /* width: 50px; */
+      /* height: 10px; */
+      text-align: center;
+      vertical-align: middle;
+    }
+
+    .flyer .inner {
+      display: flex;
+      flex-direction: column;
+      border: 5px solid black;
+      margin: 15px 5px 0px 25px;
+    }
+
+    .inner .heading {
+      display: flex;
+      height: 15%;
+      /* width: 100%; */
+      background-color: lightgrey;
+      text-transform: uppercase;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .inner .mainsection {
+      height: 70%;
+      display: flex;
+    }
+
+    .inner .mainsection .sec {
+      width: 33%;
+    }
+
+    .inner .mainsection .sec img {
+      width: 100%;
+      height: 100%;
+    }
+
+    .inner #sec2 {
+      padding: 12px 24px;
+    }
+
+    .inner .sec .shipping {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .inner .sec .shipping p {
+      text-transform: uppercase;
+      font-weight: bold;
+      color: grey;
+    }
+
+    .inner .sec .text a {
+      color: #222;
+    }
+
+    .inner .colors {
+      margin-top: 30px;
+      display: flex;
+      gap: 10px;
+    }
+
+    .inner .colors .cols {
+      width: 25px;
+      height: 25px;
+    }
+
+    .inner #col1 {
+      background-color: black;
+    }
+
+    .inner #col2 {
+      background-color: blue;
+    }
+
+    .inner #col3 {
+      background-color: red;
+    }
+
+    .inner #col4 {
+      background-color: orange;
+    }
+
+    .inner #col5 {
+      background-color: green;
+    }
+
+    .inner #col6 {
+      background-color: brown;
+    }
+
+    .inner #sec3 {
+      display: flex;
+      flex-direction: column;
+      padding: 12px 24px;
+    }
+
+    .inner #sec3 h3 {
+      text-transform: uppercase;
+      margin-left: 20px;
+    }
+
+    .inner #sec3 ul {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .inner #sec3 ul li {
+      list-style: square;
+    }
+
+    .inner .cart {
+      height: 15%;
+    }
+
+    .inner .cart button {
+      width: 100%;
+      color: #fff;
+      background-color: #444;
+      text-transform: uppercase;
+      padding-top: 10px;
+      font-size: 28px;
+    }
+  </style>
+
+  <body>
+    <div class="flyer">
+      <div class="sale">Sale</div>
+      <div class="inner">
+        <div class="heading">
+          <h2>Converse Chuck Taylor All Star Low Top</h2>
+        </div>
+        <div class="mainsection">
+          <div class="sec" id="sec1">
+            <img src="./shoes-flyer.jpg" alt="shoes image" />
+          </div>
+          <div class="sec" id="sec2">
+            <div class="shipping">
+              <h2>$65.00</h2>
+              <p>Free Shipping</p>
+            </div>
+            <div class="text">
+              <p>
+                Ready to dress up or down, these classic canvas Chucks are an
+                everyday wardrobe staple.
+              </p>
+              <a href="#">More information &rarr;</a>
+            </div>
+            <div class="colors">
+              <div class="cols" id="col1"></div>
+              <div class="cols" id="col2"></div>
+              <div class="cols" id="col3"></div>
+              <div class="cols" id="col4"></div>
+              <div class="cols" id="col5"></div>
+              <div class="cols" id="col6"></div>
+            </div>
+          </div>
+          <div class="sec" id="sec3">
+            <h3>Product Details</h3>
+            <ul>
+              <li>Lightweight, durable canvas sneaker</li>
+              <li>Lightly padded footbed for added comfort</li>
+              <li>Iconic Chuck Taylor ankle patch</li>
+            </ul>
+          </div>
+        </div>
+        <div class="cart">
+          <button>Add to cart</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

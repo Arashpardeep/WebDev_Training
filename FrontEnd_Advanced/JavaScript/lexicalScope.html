@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /* 
+        lexical scope says that:
+
+        1) A function can access the variables which are declared outside the function which are known as global variables.
+
+        2) A function can also be nested inside another function and the nested function can access the variables or properties of the outerfunction but outerfunction cannot access the variables and properties of the inner function
+    */
+
+      let x = "This is a global scope";
+
+      const outer = () => {
+        let a = 10;
+        const inner = () => {
+          let b = 20;
+          console.log(a);
+
+          const innerMost = () => {
+            console.log(b);
+          };
+          innerMost();
+        };
+      };
+    </script>
+  </body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button id="btn1">Click</button>
+
+    <div id="divn" style="background-color: aqua">This is a div</div>
+
+    <button id="toglbtn">Hide para</button>
+    <p id="toggled">Toggled paragraph</p>
+
+    <button id="blink">BlinkIt</button>
+
+    <img src="./first.jpg" alt="Image" id="first" />
+
+    <script>
+      var g = document.getElementById("btn1");
+
+      g.addEventListener("click", function () {
+        console.log("hi");
+      });
+
+      var divn = document.querySelector("#divn");
+
+      var defaultColor = window.getComputedStyle(divn).backgroundColor;
+
+      divn.addEventListener("mouseover", function () {
+        divn.style.backgroundColor = "yellow";
+      });
+
+      divn.addEventListener("mouseout", function () {
+        divn.style.backgroundColor = defaultColor;
+      });
+
+      var toglbtn = document.querySelector("#toglbtn");
+      var toggled = document.querySelector("#toggled");
+
+      toglbtn.addEventListener("click", function () {
+        if (toggled.style.display == "none") {
+          toggled.style.display = "block";
+          toglbtn.innerText = "Hide Para";
+        } else {
+          toggled.style.display = "none";
+          toglbtn.innerText = "Show Para";
+        }
+      });
+
+      var blink = document.querySelector("#blink");
+      var count = 0;
+
+      var image = document.querySelector("#first");
+      var src1 = "./first.jpg";
+      var src2 = "./second.jpg";
+      var currentimg = src1;
+
+      blink.addEventListener("click", function () {
+        if (count < 4) {
+          if (currentimg == src1) {
+            currentimg = src2;
+            image.src = src2;
+          } else {
+            currentimg = src1;
+            image.src = src1;
+          }
+        } else {
+          image.style.display = "none";
+        }
+        count++;
+        console.log(count);
+      });
+    </script>
+  </body>
+</html>

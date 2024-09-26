@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Strings</title>
+  </head>
+  <body>
+    <script>
+      //   var name = "Hello";
+      //   console.log(name.substring(1, 4)); //substring(startindex, endindex); endindex is excluded
+      //   console.log(name.substr(1, 4)); //substr(startindex, length);
+
+      var email = "deloitte@deloitte.com";
+      var atrate = email.indexOf("@");
+      var dot = email.lastIndexOf(".");
+      var res = email.substring(atrate + 1, dot);
+      console.log(res);
+
+      var c = "A";
+      console.log(c.charCodeAt()); //charCodeAt() is to retrieve ASCII values of the character.
+
+      var init = "allthebest";
+      var final = "";
+      for (i = init.length - 1; i >= 0; i--) {
+        final += init[i];
+      }
+      console.log(final);
+
+      var init1 = "this is my best work";
+      var res1 = "";
+      for (i = 0; i < init1.length; i++) {
+        if (init1[i] == " ") res1 += "$";
+        else res1 += init1[i];
+      }
+      console.log(res1);
+
+      var res2 = "";
+      res2 += init1[0].toUpperCase();
+      for (i = 1; i < init1.length; i++) {
+        if (init1[i - 1] == " ") {
+          res2 += init1[i].toUpperCase();
+        } else {
+          res2 += init1[i];
+        }
+      }
+      console.log(res2);
+    </script>
+  </body>
+</html>

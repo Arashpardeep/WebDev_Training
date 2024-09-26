@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function init(a, b, c) {
+        console.log("Adding proces is going on");
+
+        function add() {
+          return a + b + c;
+        }
+
+        function multiply(){
+            return a*b*c;
+        }
+
+        return {
+            // add: add,
+            // multiply: multiply
+
+            /* propertyname: value */
+
+            add,
+            multiply
+
+            // if propertyname and value is same, then we can write it only once as above
+
+        }
+      }
+      return add;
+
+      let output = init(10, 20, 30);
+      console.log(output());
+
+      function demo() {
+        let a = 10;
+      }
+
+      demo();
+      console.log(a);
+    </script>
+  </body>
+</html>

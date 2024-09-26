@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button id="start">Start Counting</button>
+    <button id="stop">Stop Counter</button>
+    <p id="counter">0</p>
+    <script>
+      /*
+            Ways of Asynchronous Js:
+            1) settimeout or setinterval
+            2) Callbacks
+            3) Promises
+            4) Asynchronous await
+        */
+
+      //   function func1() {
+      //     console.log("func1");
+      //   }
+
+      //   function func2() {
+      //     setInterval(() => {
+      //       console.log("func2");
+      //     }, 5000);
+      //   }
+
+      //   function func3() {
+      //     setTimeout(() => {
+      //       console.log("func3");
+      //     }, 3000);
+      //   }
+
+      //   const i = setInterval(() => {
+      //     console.log("const");
+      //   })
+
+      //   function cl(){
+      //     clearInterval(i)
+      //   }
+
+      //   func1();
+      //   func3();
+      //   func2();
+
+      var sum = 0;
+
+      var para = document.querySelector("#counter");
+      var startit = document.querySelector("#start");
+      var stopit = document.querySelector("#stop");
+
+      startit.addEventListener("click", startcounter);
+      stopit.addEventListener("click", stopcounter);
+
+      let count;
+
+      function startcounter() {
+        count = setInterval(() => {
+          sum++;
+          para.innerText = sum;
+          //   document.write(para.innerText);
+        }, 1000);
+      }
+
+      function stopcounter() {
+        clearInterval(count);
+      }
+
+    //   for (i = 0; i <= 5; i++) {
+    //     setTimeout(() => {
+    //       console.log(i);
+    //     }, 500);
+    //   } //This will print 6 six times 
+
+    //   for (let i = 0; i <= 5; i++) {
+    //     setTimeout(() => {
+    //       console.log(i);
+    //     }, 500);
+    //   } //This prints 1 to 5
+
+    //   for (const i = 0; i <= 5; i++) {
+    //     setTimeout(() => {
+    //       console.log(i);
+    //     }, 500);
+    //   }  //This will print only 0 and then gives error after that
+
+      //   synchronous is put on
+    </script>
+  </body>
+</html>

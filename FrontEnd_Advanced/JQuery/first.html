@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JQuery</title>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+  </head>
+  <body>
+    <p class="p1">This is para 1</p>
+
+    <div class="divn">This is a division</div>
+
+    <label for="num1">Number 1:</label>
+    <input
+      type="number"
+      id="num1"
+      name="num1"
+      placeholder="Enter first number"
+    />
+
+    <br /><br />
+
+    <label for="num2">Number 2:</label>
+    <input
+      type="number"
+      id="num2"
+      name="num2"
+      placeholder="Enter second number"
+    />
+
+    <br /><br />
+
+    <button id="btnsum">Calculate the sum</button>
+
+    <br /><br />
+
+    <input type="text" id="consectype" />
+
+    <p id="output"></p>
+
+    <p id="para2">Text is displayed</p>
+
+    <button id="toggled">Hide para</button>
+
+    <script>
+      // Everything in JQuery is a method
+
+      /*  Methods in JQuery:
+                1) text()
+                2) html()
+                3) val()
+
+                STYLE:
+                4) css()
+                5) addclass()
+                6) removeclass()
+                7) toggleclass()
+
+                EVENTS:
+                8) All the events we studied in JavaScript
+
+                DISPLAY:
+                9) hide()
+                10) show()
+                8) toggle()
+
+                FADING:
+                11) fadeIn()
+                12) fadeOut()
+                13) fadeToggle()
+                -> We can pass any time in milliseconds in above three.
+                -> We also pass "slow", which means 600ms, or "fast", which means 200ms.
+
+        */
+
+      $(document).ready(function () {
+        // alert("Hello");
+        $(".p1").text("Changed text");
+
+        var divn = $(".divn").text();
+        $(".divn").html(`<strong>${divn}</strong`);
+        $(".divn").css({ color: "blue", "background-color": "pink" });
+
+        $(".p1").mouseover(function () {
+          $(".p1").css({ "background-color": "beige", color: "brown" });
+        });
+
+        $(".p1").mouseleave(function () {
+          $(".p1").css({ "background-color": "white", color: "black" });
+        });
+
+        var btnsum = $("#btnsum");
+
+        btnsum.click(function () {
+          var num1 = parseFloat($("#num1").val());
+          var num2 = parseFloat($("#num2").val());
+          var sum = num1 + num2;
+          alert(`The sum of two number is: ${sum}`);
+        });
+
+        $("#consectype").keyup(function () {
+          var inpval = $("#consectype").val();
+          $("#output").text(inpval);
+        });
+
+        $("#toggled").click(function () {
+          $("#para2").fadeToggle("slow");
+        });
+      });
+    </script>
+  </body>
+</html>

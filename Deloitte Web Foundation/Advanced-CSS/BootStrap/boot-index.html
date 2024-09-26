@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BootStrap Demo</title>
+    <!-- BootStrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    />
+    <!-- BootStrap JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  </head>
+  <body>
+    <div class="container mb-5 mt-5">
+      <div class="row">
+        <div class="col-3" style="border: 1px solid green">Column</div>
+        <div class="col-9" style="border: 1px solid green">Column</div>
+        <div class="col-5" style="border: 1px solid green">Column</div>
+        <div class="col-7" style="border: 1px solid green">Column</div>
+        <div class="col-6" style="border: 1px solid green">Column</div>
+        <div class="col-6" style="border: 1px solid green">Column</div>
+      </div>
+    </div>
+
+    <div class="container mb-5 mt-5">
+
+      <!-- Nav tabs -->
+      <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link active"
+            id="home-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#home"
+            type="button"
+            role="tab"
+            aria-controls="home"
+            aria-selected="true"
+          >
+            Home
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link"
+            id="profile-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#profile"
+            type="button"
+            role="tab"
+            aria-controls="profile"
+            aria-selected="false"
+          >
+            Profile
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link"
+            id="messages-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#messages"
+            type="button"
+            role="tab"
+            aria-controls="messages"
+            aria-selected="false"
+          >
+            Messages
+          </button>
+        </li>
+      </ul>
+
+      <!-- Tab panes -->
+      <div class="tab-content">
+        <div
+          class="tab-pane active"
+          id="home"
+          role="tabpanel"
+          aria-labelledby="home-tab"
+        >
+          home
+        </div>
+        <div
+          class="tab-pane"
+          id="profile"
+          role="tabpanel"
+          aria-labelledby="profile-tab"
+        >
+          profile
+        </div>
+        <div
+          class="tab-pane"
+          id="messages"
+          role="tabpanel"
+          aria-labelledby="messages-tab"
+        >
+          messages
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-8 offset-2">
+          <div class="row">
+            <div class="col-8 p-0">
+              <input type="text" class="form-control" />
+            </div>
+            <div class="col-4 p-0">
+              <div class="d-grid">
+                <button class="btn btn-primary">Add</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <p class="text-decoration-line-through">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia,
+        distinctio.
+      </p>
+
+      <p class="lead-decoration-line-through">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia,
+        distinctio.
+      </p>
+
+      <p class="display-4">Display 4</p>
+      <p class="display-3">Display 3</p>
+      <p class="display-2">Display 2</p>
+
+      <div class="row">
+        <div
+          class="offset-sm-2 col-12 col-sm-8 col-md-6 col-lg-4 col-xl-3"
+          style="border: 2px solid red"
+        >
+          xs-12 sm-8 md-6 lg-4 xl-3
+        </div>
+        <div
+          class="col-12 col-sm-4 col-md-6 col-lg-4 col-xl-3"
+          style="border: 2px solid green"
+        >
+          xs-12 sm-4 md-6 lg-4 xl-3
+        </div>
+        <div
+          class="col-12 col-sm-4 col-md-6 col-lg-4 col-xl-3"
+          style="border: 2px solid yellow"
+        >
+          xs-12 sm-4 md-6 lg-4 xl-3
+        </div>
+        <div
+          class="col-12 col-sm-4 col-md-6 col-lg-4 col-xl-3"
+          style="border: 2px solid blue"
+        >
+          xs-12 sm-4 md-6 lg-4 xl-3
+        </div>
+      </div>
+    </div>
+
+    <div class="container" style="border: 1px solid red">
+      <h1>Hello BootStrap!</h1>
+    </div>
+
+    <div class="container-fluid" style="border: 1px solid green">
+      <h1>Hello BootStrap!</h1>
+    </div>
+  </body>
+</html>

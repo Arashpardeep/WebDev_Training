@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FlexBox Demo</title>
+  </head>
+
+  <style>
+    .container {
+      background-color: lightgray;
+      font-size: 28px;
+      display: flex;
+      gap: 10px;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: nowrap;
+    }
+
+    .box1 {
+      background-color: yellow;
+      flex-basis: 250px;
+      flex-shrink: 1;
+    }
+
+    .box2 {
+      background-color: orange;
+      flex-grow: 1;
+    }
+
+    .box3 {
+      background-color: greenyellow;
+      height: 150px;
+    }
+
+    .box4 {
+      background-color: green;
+      order: -1;
+      flex-grow: 2;
+    }
+
+    .box5 {
+      background-color: goldenrod;
+      order: 1;
+    }
+
+    .box6 {
+      background-color: salmon;
+      align-self: flex-end;
+    }
+
+    .box7 {
+      background-color: saddlebrown;
+      order: 2;
+    }
+
+    .box8 {
+      background-color: fuchsia;
+      flex: 0 1 auto;
+      /* flex: flex-grow flex-shrink flex-basis*/
+      /* The above given are the default values of flex */
+    }
+  </style>
+
+  <body>
+    <h1>FlexBox Demo</h1>
+
+    <div class="container">
+      <div class="box1">FlexBox (1)</div>
+      <div class="box2">and (2)</div>
+      <div class="box3">Grids(3)</div>
+      <div class="box4">are (4)</div>
+      <div class="box5">great (5)</div>
+      <div class="box6">for (6)</div>
+      <div class="box7">building (7)</div>
+      <div class="box8">layouts (8)</div>
+    </div>
+  </body>
+</html>

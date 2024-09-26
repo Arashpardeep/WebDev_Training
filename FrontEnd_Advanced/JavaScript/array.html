@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var d = [16, 72, 13, 44, 25];
+      //   for (var i = 0; i < d.length; i++) {
+      //     console.log(d[i]);
+      //   }
+
+      //   for (x of d) {
+      //     console.log(x);
+      //   }
+      //   Here x is representing the elements inside the d array
+
+      //   for (y in d) {
+      //     console.log(y);
+      //   }
+      //  Here y is representing the index of d array
+
+      document.write("Initial Values are: ");
+
+      for (var i = 0; i < d.length; i++) {
+        document.write(d[i] + " ");
+      }
+
+      document.write("<br>");
+
+      var n = d.length;
+
+      for (var i = 0; i < d.length / 2; i++) {
+        var c;
+        c = d[i];
+        d[i] = d[n - i - 1];
+        d[n - i - 1] = c;
+      }
+
+      document.write("Later Values are: ");
+
+      for (var i = 0; i < d.length; i++) {
+        document.write(d[i] + " ");
+      }
+
+      d.push(67); //Inserts at last
+      d.unshift(35); //Inserts in beginning
+
+      d.pop(); //Deletes from last
+      d.shift(); //Deletes from start
+
+      d.reverse(); //To reverse the array
+
+      var res = d.slice(2, 4); //It gives part of array, but it do not make changes in original array
+      for (j of res) {
+        console.log(j);
+      }
+
+      var res1 = d.splice(2, 4); //It takes initial index as first parameter, second is the number of elements you want to select, and it also make changes in the original array unlike slice
+      for (j of res1) {
+        console.log(j);
+      }
+
+      console.log("Chota ho gya re baba!");
+      for (j of d) {
+        console.log(j);
+      }
+
+      var d1 = [34, 56, 23, [3, [4, 5, 6]], [3, 4, 5]];
+      //   var res2 = d1.flat(); //It reduces 1 dimension of array downwards
+      //   for (k of res2) {
+      //     console.log(k);
+      //   }
+
+      delete d1[3];
+
+      console.log("<br>");
+      for (l of d1) {
+        console.log(l);
+      }
+    </script>
+  </body>
+</html>

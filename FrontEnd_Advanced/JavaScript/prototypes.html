@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function CreatePerson(fname, lname) {
+        this.fname = fname;
+        this.lname = lname;
+        CreatePerson.prototype.display = function () {
+          console.log(this.fname);
+          console.log(this.lname);
+        };
+      }
+
+      // Prototypes are used if we have some code which is to be duplicated, we can reduce the duplicacy by prototypes
+
+      // Object is the last prototype
+
+      const p1 = new CreatePerson("Sam", "Jones");
+      const p2 = new CreatePerson("Ram", "Sharma");
+
+      console.log(p1.__proto__.display === CreatePerson.prototype.display);
+
+      function Student(id, name) {
+        this.id = id;
+        this.name = name;
+      }
+
+      var student = new Student(1, "Sam");
+
+      Student.prototype.collegename = "Abcd";
+
+      Student.prototype.display = function () {
+        console.log(this.id);
+        console.log(this.name);
+        console.log(this.collegename)
+      };
+
+      console.log(student);
+      student.display();
+
+      let student1 = new Student(2, "John");
+      student1.display();
+
+      let employee = new Object();
+      employee.id = 23;
+      console.log(employee);
+    </script>
+  </body>
+</html>

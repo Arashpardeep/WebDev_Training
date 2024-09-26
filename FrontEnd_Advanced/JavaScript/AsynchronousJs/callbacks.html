@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function Register(se) {
+        console.log("register");
+        se();
+      }
+      function SendEmail(login) {
+        setTimeout(function () {
+          console.log("send email");
+          login();
+        });
+      }
+      function Login(ui) {
+        console.log("login success");
+        ui();
+      }
+      function Userinfo() {
+        console.log("display user");
+      }
+      function Random() {
+        console.log("random info");
+      }
+
+      Register(function () {
+        SendEmail(function () {
+          Login(function () {
+            Userinfo();
+          });
+        });
+      });
+
+      // If there is a lot of callback, it creates a problem for error handling which is called Callback Hell.
+    </script>
+  </body>
+</html>

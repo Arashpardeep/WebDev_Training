@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+  </head>
+  <body>
+    <label for="uname">Username</label>
+    <input type="text" id="uname" name="uname" />
+
+    <label for="length">Length</label>
+    <input type="text" id="length" name="length" />
+
+    <label for="gmail">Email</label>
+    <input type="text" id="gmail" name="gmail" />
+
+    <button id="validate">Validate</button>
+
+    <script>
+      $(function () {
+        $("#validate").click(function () {
+          var uname = $("#uname").val();
+          var length = $("#length").val();
+          var email = $("#gmail").val();
+
+          var pattern1 = /^[A-Za-z0-9]+$/;
+          var pattern2 = /^[a-z0-9]{9}$/;
+          var pattern3 = /^[a-z0-9][@][a-z][.][a-z]+$/;
+
+          //   if (!pattern1.test(uname)) {
+          //     alert(pattern1.test(uname));
+          //   }
+          //   if (!pattern2.test(length)) {
+          //     alert(pattern2.test(length));
+          //   }
+          if (!pattern3.test(length)) {
+            alert(pattern3.test(length));
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

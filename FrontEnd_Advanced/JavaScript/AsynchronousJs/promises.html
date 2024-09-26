@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Promises</title>
+  </head>
+  <body>
+    <script>
+      function Register() {
+        return new Promise((resolve, reject) => {
+          console.log("Register");
+          resolve();
+        });
+      }
+
+      function SendEmail(b) {
+        return new Promise((resolve, reject) => {
+          console.log("Email sent to " + b);
+          resolve();
+        });
+      }
+
+      function Login() {
+        return new Promise((resolve, reject) => {
+          if (1 == 1) return resolve();
+          else reject("Login Failed");
+        });
+      }
+
+      function DisplayUser() {
+        return new Promise((resolve, reject) => {
+          console.log("Display user info");
+          resolve();
+        });
+      }
+
+      Register()
+        .then(Login)
+        .then(SendEmail)
+        .then(DisplayUser)
+        .catch((e) => {
+          console.log(e);
+        })
+        .finally(() => {
+          console.log("finally");
+        });
+
+      const promise1 = Promise.resolve(13);
+      const promise2 = new Promise((resolve, reject) => {
+        return resolve(34);
+      });
+
+      Promise.all([promise1, promise2])
+        .then((x) => console.log(x))
+        .catch((x) => console.log(x));
+    </script>
+  </body>
+</html>

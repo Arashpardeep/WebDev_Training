@@ -1,0 +1,14 @@
+@import url("./button.css");
+
+h1{
+    color: goldenrod;
+}
+
+p{
+    margin: 20px;
+}
+
+.container{
+    columns: 3;
+}
+    

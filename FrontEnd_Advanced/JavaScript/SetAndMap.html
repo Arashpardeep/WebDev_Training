@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //   A = [1, 2, 3, 1, 3, 1, 3, 1, 4, 4, 4, 5];
+
+      //   A.sort();
+
+      //   B = [];
+      //   var k = 0;
+
+      //   for (var i = 0; i < A.length; i++) {
+      //     if (A[i] == A[i - 1]) continue;
+      //     else {
+      //       B[k] = A[i];
+      //       k++;
+      //     }
+      //   }
+
+      //   console.log(B);
+
+      //   var temp = 0;
+      //   for (var i = 0; i < A.length; i++) {
+      //     if (A[i] == A[i + 1]) {
+      //       temp++;
+      //     } else {
+      //       console.log(`${A[i]} - ${++temp}`);
+      //       temp = 0;
+      //     }
+      //   }
+
+      A = [10, 12, 3, 4, 4, 5, 5, 5, 10];
+      var g = new Array();
+      var x = new Set([1, 2, 3, 2, 2, 1]);
+      x.add(10);
+      x.add(12);
+      x.add(1);
+      x.add(10);
+      x.add(1);
+
+      console.log(x.has(12));
+      x.delete(2);
+      x.clear();
+      console.log(x.size);
+      console.log(x);
+
+      var map = new Map();
+      map.set(1, "Hyd");
+      map.set(2, "Del");
+      map.set(3, "Mum");
+
+      console.log(map);
+
+      var y = new Map();
+      for (i of A) {
+        if (y.has(i)) {
+          y.set(i, y.get(i) + 1);
+        } else {
+          y.set(i, 1);
+        }
+      }
+
+      console.log(y);
+
+      // In map, key can't be repeated but value can be repeated
+    </script>
+  </body>
+</html>

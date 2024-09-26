@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Search Engine Images</title>
+  </head>
+
+  <style>
+    h1 {
+      text-align: center;
+    }
+
+    div {
+      text-align: center;
+    }
+
+    img {
+      border: 2px solid black;
+      width: 200px;
+      height: 200px;
+    }
+  </style>
+
+  <body>
+    <h1>Search Engines</h1>
+
+    <div>
+      <div class="imagemap">
+        <img src="./logos/Google.jpg" alt="Google" usemap="#google" />
+        <map name="google">
+          <area
+            shape="rect"
+            coords="13,16,190,184"
+            href="https://www.google.co.in/"
+            alt="Google"
+            target="_blank"
+          />
+        </map>
+      </div>
+
+      <div class="imagemap">
+        <img src="./logos/Yahoo.jpg" alt="Yahoo" usemap="#yahoo" />
+        <map name="yahoo">
+          <area
+            shape="circle"
+            coords="98,99,73"
+            href="https://in.search.yahoo.com/?fr2=inr"
+            alt="Yahoo"
+            target="_blank"
+          />
+        </map>
+      </div>
+
+      <div class="imagemap">
+        <img src="./logos/Bing.png" alt="Microsoft Bing" usemap="#bing" />
+        <map name="bing">
+          <area
+            shape="poly"
+            coords="90,165,59,140,59,79,6,66,7,31,191,31,192,73,135,79,131,147"
+            href="https://www.bing.com/new"
+            alt="Microsoft Bing"
+            target="_blank"
+          />
+        </map>
+      </div>
+    </div>
+  </body>
+</html>

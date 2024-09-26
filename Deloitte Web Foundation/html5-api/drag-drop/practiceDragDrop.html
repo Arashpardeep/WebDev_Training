@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Practice Drag Drop</title>
+  </head>
+
+  <style>
+    div {
+      display: inline-block;
+      margin: 20px;
+      padding: 12px;
+      background-color: lightgrey;
+      color: black;
+      font-weight: 800;
+      border: 5px solid black;
+      border-radius: 10px;
+      width: 200px;
+      text-align: center;
+      cursor: pointer;
+    }
+
+    .opaque {
+      opacity: 0.4;
+    }
+
+    .dropable {
+      border: 2px dashed black;
+    }
+  </style>
+
+  <body>
+    <h1>Dragging and Dropping</h1>
+
+    <div id="div1" class="container" draggable>A</div>
+    <div id="div2" class="container" draggable>B</div>
+    <div id="div3" class="container" draggable>C</div>
+
+    <script>
+      var cont = document.querySelectorAll(".container");
+      var temp = null;
+
+      for (var i = 0; i < cont.length; i++) {
+        cont[i].addEventListener("dragstart", dragStart);
+        cont[i].addEventListener("dragover", dragOver);
+        cont[i].addEventListener("dragend", dragEnd);
+        cont[i].addEventListener("drop", drop);
+      }
+
+      function dragStart(event) {
+        event.dataTransfer.setData("divs", event.target.innerText);
+        temp = event.target;
+        temp.classList.add("opaque"); //classList can dynamically add or remove any css classes
+      }
+
+      function dragOver(event) {
+        event.preventDefault();
+        event.target.classList.add("dropable");
+      }
+
+      function dragEnd(event) {}
+
+      function drop(event) {
+        var divsn = event.dataTransfer.getData("divs");
+        temp.innerText = event.target.innerText;
+        temp.classList.remove("opaque", "dropable");
+        event.target.innerText = divsn;
+        event.target.classList.remove("dropable");
+      }
+    </script>
+  </body>
+</html>
